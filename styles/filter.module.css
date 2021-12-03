@@ -1,0 +1,178 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+
+.search_dark,
+.search_light {
+  position: relative;
+}
+
+.search_dark input,
+.search_light input {
+  width: 100%;
+  height: 60px;
+  padding: 2em 2em 2em 4.5em;
+  background: hsl(209, 23%, 22%);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  outline: none;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.4);
+  transition: background 0.3s ease;
+}
+
+.search_light input {
+  background: #fff;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.search_dark input::placeholder,
+.search_light input::placeholder {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 300;
+  transition: color 0.3s ease;
+}
+
+.search_light input::placeholder {
+  color: hsl(200, 15%, 8%);
+}
+
+.search_dark svg,
+.search_light svg {
+  position: absolute;
+  left: 25px;
+  top: 21px;
+  color: #fff;
+  font-size: 1.2em;
+  fill: #fff;
+  transition: color 0.3s ease;
+}
+
+.search_light svg {
+  fill: hsl(0, 0%, 52%);
+}
+
+.filter_light,
+.filter_dark {
+  position: relative;
+}
+
+.dropdown_light,
+.dropdown_dark {
+  position: relative;
+  user-select: none;
+}
+
+.dropdown_dark,
+.dropdown_light,
+.dropbox_light,
+.dropbox_dark {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  margin: 20px 0;
+  background: hsl(209, 23%, 22%);
+  padding: 1em;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease;
+}
+
+.dropdown_light {
+  background: #fff;
+}
+
+.dropdown_light p {
+  color: hsl(200, 15%, 8%);
+}
+
+.dropdown_light svg,
+.dropdown_dark svg {
+  fill: #fff;
+  margin-left: auto;
+  font-size: 14px;
+  transition: fill 0.3s ease;
+}
+
+.dropdown_light svg {
+  fill: hsl(200, 15%, 8%);
+}
+
+.dropbox_dark,
+.dropbox_light {
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  align-items: flex-start;
+  margin-top: -5px;
+  padding: 0.7em 0;
+  position: absolute;
+  z-index: 10;
+}
+
+.dropbox_light {
+  background: #fff;
+  transition: background 0.3s ease;
+}
+
+.active_dropbox {
+  display: flex;
+}
+
+.dropbox_dark li,
+.dropbox_light li {
+  padding: 0.5em 0.8em;
+  font-size: 14px;
+  width: 100%;
+  margin-left: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.dropbox_light li {
+  color: hsl(200, 15%, 8%);
+}
+
+.dropbox_dark li:hover,
+.dropbox_light li:hover {
+  font-weight: 800;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+  }
+
+  .search_dark,
+  .search_light {
+    width: 40%;
+  }
+
+  .filter_light,
+  .filter_dark {
+    width: 20%;
+  }
+
+  .dropdown_light,
+  .dropdown_dark {
+    width: 100%;
+  }
+
+  .dropbox_light,
+  .dropbox_dark {
+    width: 100%;
+    margin-top: -5px;
+  }
+}

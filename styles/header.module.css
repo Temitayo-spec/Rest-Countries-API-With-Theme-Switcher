@@ -1,0 +1,97 @@
+.wrapper_light {
+  width: 100%;
+  box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.2);
+  background: hsl(0, 0%, 98%);
+  transition: background 0.3s ease;
+}
+.wrapper_dark {
+  width: 100%;
+  box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.2);
+  background: hsl(209, 23%, 22%);
+  transition: background 0.3s ease;
+}
+
+.header_dark {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  background: hsl(209, 23%, 22%);
+  color: #fff;
+  padding: 2em 0;
+  transition: background 0.3s ease;
+}
+
+.header_light {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  background: hsl(0, 0%, 98%);
+  color: #fff;
+  padding: 2em 0;
+  transition: background 0.3s ease;
+}
+
+.theme_switcher_on {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  width: 32%;
+  cursor: pointer;
+}
+
+.theme_switcher_off {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  width: 32%;
+  cursor: pointer;
+}
+
+.theme_switcher_on svg {
+  width: 12%;
+  margin-right: 0.5em;
+}
+
+.theme_switcher_off svg {
+  width: 12%;
+  margin-right: 0.5em;
+}
+
+.theme_switcher_on svg path {
+  fill: hsl(200, 15%, 8%);
+  transition: fill 0.5s ease;
+}
+
+.theme_switcher_off svg path {
+  fill: #fff;
+  transition: fill 0.5s ease;
+}
+
+.header_light h3 {
+  color: hsl(200, 15%, 8%);
+}
+
+@media screen and (min-width: 768px) {
+  .header_light h3 {
+    font-size: 1.2em;
+  }
+  .header_dark h3 {
+    font-size: 1.2em;
+  }
+  .theme_switcher_on {
+    width: 12%;
+  }
+  .theme_switcher_off {
+    width: 12%;
+  }
+
+  .theme_switcher_on svg {
+    width: 9%;
+  }
+
+  .theme_switcher_off svg {
+    width: 9%;
+  }
+}

@@ -1,0 +1,30 @@
+.container_dark {
+  background: hsl(207, 26%, 17%);
+  transition: background 0.5s ease;
+  position: relative;
+}
+
+.container_light {
+  position: relative;
+  background: hsl(0, 0%, 98%);
+  transition: background 0.5s ease;
+}
+
+@media screen and (min-width: 768px) {
+  .container_dark {
+    background: hsl(207, 26%, 17%);
+    transition: background 0.5s ease;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .container_light {
+    height: 100vh;
+    position: relative;
+    background: hsl(0, 0%, 98%);
+    height: 100vh;
+    transition: background 0.5s ease;
+    overflow: hidden;
+  }
+}

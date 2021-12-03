@@ -1,0 +1,115 @@
+.wrapper {
+  width: 100%;
+  margin: 30px auto 30px auto;
+}
+
+.card_dark,
+.card_light {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: hsl(209, 23%, 22%);
+  margin: 1.5em auto;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+  animation: slide-in 0.6s forwards ease;
+}
+
+.card_dark:hover,
+.card_light:hover {
+  margin-top: -2px;
+  transition: all 0.2s ease-in-out;
+}
+
+.card_light {
+  background: hsl(0, 0%, 100%);
+}
+
+.card_dark img,
+.card_light img {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card_content_dark,
+.card_content_light {
+  padding: 2em;
+}
+
+.card_content_dark h2,
+.card_content_light h2 {
+  font-size: 1.5em;
+  font-weight: 300;
+  color: hsl(0, 0%, 100%);
+  margin: 0.6em 0;
+}
+
+.card_content_light h2 {
+  color: hsl(200, 15%, 8%);
+}
+
+.card_content_dark p,
+.card_content_light p {
+  font-size: 1em;
+  font-weight: 400;
+  color: hsl(0, 0%, 100%);
+  margin: 0.5em 0;
+}
+
+.card_content_light p {
+  color: hsl(200, 15%, 8%);
+}
+
+.card_content_dark p span,
+.card_content_light p span {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+}
+
+.card_content_light p span {
+  color: hsl(200, 15%, 8%);
+}
+
+.main{
+  width: 90%;
+  margin: auto;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .inner {
+    height: 70vh;
+    overflow: auto;
+    width: 100%;
+  }
+  .main {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2em;
+  }
+
+  .card_content_dark,
+  .card_content_light {
+    padding: 0em 2em 0 2em;
+  }
+}
