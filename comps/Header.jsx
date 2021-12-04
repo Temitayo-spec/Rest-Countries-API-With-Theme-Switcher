@@ -53,7 +53,7 @@ const Header = () => {
               />
             </svg>
           )}
-          <h3>Dark mode</h3>
+          {theme ? <h3>Dark mode</h3> : <h3>Light mode</h3>}
         </div>
       </header>
     </div>
